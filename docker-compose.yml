@@ -1,11 +1,11 @@
 version: '3.7'
 services:
-  mysql:
-    image: mysql:latest
+  postgresql:
+    image: postgresql:latest
     ports:
-      - '3306:3306'
+      - '3306:9999'
     volumes:
-      - ./data:/var/lib/mysql
+      - ./data:/var/lib/postgresql
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
       - MYSQL_DATABASE=db
