@@ -1,13 +1,12 @@
 version: '3.7'
 services:
-  postgresql:
-    image: postgresql:latest
+  postgresdb:
+    image: postgres:latest
     ports:
-      - '3306:9999'
+      - '5432:5432'
     volumes:
-      - ./data:/var/lib/postgresql
+      - ./data:/var/lib/postgresql/data
     environment:
-      - MYSQL_RANDOM_ROOT_PASSWORD=yes
-      - MYSQL_DATABASE=db
-      - MYSQL_USER=app
-      - MYSQL_PASSWORD=9mREsvXDs9Gk89Ef
+      - POSTGRES_DB=db
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=pass
